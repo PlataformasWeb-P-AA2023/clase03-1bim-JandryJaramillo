@@ -1,16 +1,21 @@
-archivo = open('prueba.csv', "r")
+archivo = open('ejercicio/data/Listado-Instituciones-Educativas-distribuidas-por-zona-distrito-y-circuito.csv', "r")
 
 lineas = archivo.readlines()
 
-for x in linea:
+for l in lineas: 
 
-	x = x.split("|")
+ l = l.split("|")
 
-	nombre = x[1]
-	provincia = x[3]
-	canton = x[5]
-	parroquia = x[7]
+ nombre = l[1]
 
-cadena = """ nombre:%s\n provincia
+ canton = l[5]
+
+ provincia = l[3]
+
+ parroquia = l[7]
+
+ cadena = """ nombre:%s\n provincia:%s \n canton:%s \n parroquia:%s """ %(nombre, provincia, canton, parroquia) 
+
+ print (cadena)
 
 archivo.close()
